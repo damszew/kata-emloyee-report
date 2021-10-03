@@ -23,6 +23,27 @@ pub fn staff_system(employees: Vec<Employee>) -> Vec<Employee> {
 mod should {
     use super::*;
 
+    fn get_initial_employye_list() -> Vec<Employee> {
+        vec![
+            Employee {
+                name: "Max".into(),
+                age: 17,
+            },
+            Employee {
+                name: "Sepp".into(),
+                age: 18,
+            },
+            Employee {
+                name: "Nina".into(),
+                age: 15,
+            },
+            Employee {
+                name: "Mike".into(),
+                age: 51,
+            },
+        ]
+    }
+
     #[test]
     fn return_epmloyees_older_than_18() {
         let employees = get_initial_employye_list();
@@ -50,26 +71,5 @@ mod should {
         assert!(result
             .into_iter()
             .all(|e| { e.name.chars().all(char::is_uppercase) }));
-    }
-
-    fn get_initial_employye_list() -> Vec<Employee> {
-        vec![
-            Employee {
-                name: "Max".into(),
-                age: 17,
-            },
-            Employee {
-                name: "Sepp".into(),
-                age: 18,
-            },
-            Employee {
-                name: "Nina".into(),
-                age: 15,
-            },
-            Employee {
-                name: "Mike".into(),
-                age: 51,
-            },
-        ]
     }
 }
