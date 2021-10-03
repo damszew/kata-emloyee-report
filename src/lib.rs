@@ -20,24 +20,7 @@ mod should {
 
     #[test]
     fn return_epmloyees_older_than_18() {
-        let employees = vec![
-            Employee {
-                name: "Max".into(),
-                age: 17,
-            },
-            Employee {
-                name: "Sepp".into(),
-                age: 18,
-            },
-            Employee {
-                name: "Nina".into(),
-                age: 15,
-            },
-            Employee {
-                name: "Mike".into(),
-                age: 51,
-            },
-        ];
+        let employees = get_initial_employye_list();
 
         let result = staff_system(employees);
 
@@ -46,7 +29,15 @@ mod should {
 
     #[test]
     fn return_epmloyees_sorted_by_names() {
-        let employees = vec![
+        let employees = get_initial_employye_list();
+
+        let result = staff_system(employees.clone());
+
+        assert_eq!(result, vec![employees[3].clone(), employees[1].clone()]);
+    }
+
+    fn get_initial_employye_list() -> Vec<Employee> {
+        vec![
             Employee {
                 name: "Max".into(),
                 age: 17,
@@ -63,10 +54,6 @@ mod should {
                 name: "Mike".into(),
                 age: 51,
             },
-        ];
-
-        let result = staff_system(employees.clone());
-
-        assert_eq!(result, vec![employees[3].clone(), employees[1].clone()]);
+        ]
     }
 }
