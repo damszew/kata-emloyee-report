@@ -13,10 +13,10 @@ You’re building an employee management system of a local grocery store. The sh
 
 ```json
 [
-  { name: 'Max', age: 17 },
-  { name: 'Sepp', age: 18 },
-  { name: 'Nina', age: 15 },
-  { name: 'Mike', age: 51 },
+  { "name": "Max", "age": 17 },
+  { "name": "Sepp", "age": 18 },
+  { "name": "Nina", "age": 15 },
+  { "name": "Mike", "age": 51 },
 ]
 ```
 
