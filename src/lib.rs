@@ -14,7 +14,7 @@ pub fn staff_system(employees: Vec<Employee>) -> Vec<Employee> {
         })
         .collect::<Vec<_>>();
 
-    filtered_employees.sort_by(|a, b| a.name.cmp(&b.name));
+    filtered_employees.sort_by(|a, b| b.name.cmp(&a.name));
 
     filtered_employees
 }
