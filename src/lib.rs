@@ -36,9 +36,9 @@ mod should {
     fn return_epmloyees_sorted_by_names() {
         let employees = get_initial_employye_list();
 
-        let result = staff_system(employees.clone());
+        let result = staff_system(employees);
 
-        assert_eq!(result, vec![employees[3].clone(), employees[1].clone()]);
+        assert!(result.windows(2).all(|e| { e[0].name < e[1].name }));
     }
 
     #[test]
