@@ -4,8 +4,8 @@ pub struct Employee {
     pub age: u32,
 }
 
-pub fn staff_system(_employees: Vec<Employee>) -> Vec<Employee> {
-    todo!()
+pub fn staff_system(employees: Vec<Employee>) -> Vec<Employee> {
+    employees.into_iter().filter(|e| e.age >= 18).collect()
 }
 
 #[cfg(test)]
