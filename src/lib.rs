@@ -33,12 +33,12 @@ mod should {
     }
 
     #[test]
-    fn return_epmloyees_sorted_by_names() {
+    fn return_epmloyees_sorted_by_names_in_descent() {
         let employees = get_initial_employye_list();
 
         let result = staff_system(employees);
 
-        assert!(result.windows(2).all(|e| { e[0].name < e[1].name }));
+        assert!(result.windows(2).all(|e| { e[0].name > e[1].name }));
     }
 
     #[test]
