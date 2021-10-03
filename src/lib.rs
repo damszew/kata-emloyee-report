@@ -4,19 +4,17 @@ pub struct Employee {
     pub age: u32,
 }
 
-pub fn staff_system(employees: Vec<Employee>) -> Vec<Employee> {
-    let mut filtered_employees = employees
+pub fn staff_system(mut employees: Vec<Employee>) -> Vec<Employee> {
+    employees.sort_by(|a, b| b.name.cmp(&a.name));
+
+    employees
         .into_iter()
         .filter(|e| e.age >= 18)
         .map(|e| Employee {
             name: e.name.to_uppercase(),
             age: e.age,
         })
-        .collect::<Vec<_>>();
-
-    filtered_employees.sort_by(|a, b| b.name.cmp(&a.name));
-
-    filtered_employees
+        .collect::<Vec<_>>()
 }
 
 #[cfg(test)]
