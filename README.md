@@ -2,7 +2,7 @@
 
 ## About this Kata
 
-This Kata was developed to show how overspecification of assertions harms maintainability of tests. A blog post with a possible solution can be found here: https://dev.to/webpapaya/writing-better-test-assertions-lml
+This Kata was developed to show how overspecification of assertions harms maintainability of tests.
 
 ## Problem Description
 
