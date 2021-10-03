@@ -36,6 +36,16 @@ mod should {
         assert_eq!(result, vec![employees[3].clone(), employees[1].clone()]);
     }
 
+    #[test]
+    fn return_epmloyees_with_capitalized_names() {
+        let employees = get_initial_employye_list();
+
+        let result = staff_system(employees);
+
+        assert_eq!(result[0].name, "MIKE");
+        assert_eq!(result[1].name, "SEPP");
+    }
+
     fn get_initial_employye_list() -> Vec<Employee> {
         vec![
             Employee {
