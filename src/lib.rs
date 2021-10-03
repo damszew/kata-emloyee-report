@@ -5,7 +5,13 @@ pub struct Employee {
 }
 
 pub fn staff_system(employees: Vec<Employee>) -> Vec<Employee> {
-    employees.into_iter().filter(|e| e.age >= 18).collect()
+    let mut filtered_employees = employees
+        .into_iter()
+        .filter(|e| e.age >= 18)
+        .collect::<Vec<_>>();
+    filtered_employees.sort_by(|a, b| a.name.cmp(&b.name));
+
+    filtered_employees
 }
 
 #[cfg(test)]
