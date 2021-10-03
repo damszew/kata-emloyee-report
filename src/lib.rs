@@ -47,8 +47,9 @@ mod should {
 
         let result = staff_system(employees);
 
-        assert_eq!(result[0].name, "MIKE");
-        assert_eq!(result[1].name, "SEPP");
+        assert!(result
+            .into_iter()
+            .all(|e| { e.name.chars().all(char::is_uppercase) }));
     }
 
     fn get_initial_employye_list() -> Vec<Employee> {
