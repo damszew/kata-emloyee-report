@@ -13,7 +13,7 @@ mod should {
     use super::*;
 
     #[test]
-    fn return_epmloyees_olter_than_18() {
+    fn return_epmloyees_older_than_18() {
         let employees = vec![
             Employee {
                 name: "Max".into(),
