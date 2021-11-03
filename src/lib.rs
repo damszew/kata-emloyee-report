@@ -21,7 +21,7 @@ pub fn staff_system(mut employees: Vec<Employee>) -> Vec<Employee> {
 mod should {
     use super::*;
 
-    fn get_initial_employye_list() -> Vec<Employee> {
+    fn get_initial_employee_list() -> Vec<Employee> {
         vec![
             Employee {
                 name: "Max".into(),
@@ -43,8 +43,8 @@ mod should {
     }
 
     #[test]
-    fn return_epmloyees_older_than_18() {
-        let employees = get_initial_employye_list();
+    fn return_employees_older_than_18() {
+        let employees = get_initial_employee_list();
 
         let result = staff_system(employees);
 
@@ -52,8 +52,8 @@ mod should {
     }
 
     #[test]
-    fn return_epmloyees_sorted_by_names_in_descent() {
-        let employees = get_initial_employye_list();
+    fn return_employees_sorted_by_names_in_descent() {
+        let employees = get_initial_employee_list();
 
         let result = staff_system(employees);
 
@@ -61,8 +61,8 @@ mod should {
     }
 
     #[test]
-    fn return_epmloyees_with_capitalized_names() {
-        let employees = get_initial_employye_list();
+    fn return_employees_with_capitalized_names() {
+        let employees = get_initial_employee_list();
 
         let result = staff_system(employees);
 
